@@ -44,7 +44,7 @@ function changeSpeed (speed) {
         }
     );
 
-    showNotification(text=`Rate - ${currentSpeed.toFixed(1)}x`);
+    showNotification(text=`Speed - ${currentSpeed.toFixed(1)}x`);
 }
 
 
