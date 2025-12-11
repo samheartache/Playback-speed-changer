@@ -51,7 +51,7 @@ function changeSpeed (speed) {
 
 function main () {
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'F7') {
+        if (e.key === 'F8') {
             e.preventDefault();
             isEnabled = !isEnabled;
 
@@ -70,21 +70,21 @@ function main () {
             return;
         }
 
-        switch (e.key) {
-            case ']':
-                changeSpeed(currentSpeed + 0.25);
-                break;
-
-            case '[':
-                changeSpeed(currentSpeed - 0.25);
+        switch (e.code) {
+            case 'ShiftRight':
+                changeSpeed(1.0);
                 break;
             
-            case '=':
+            case 'ControlRight':
                 changeSpeed(2.0);
                 break;
+
+            case 'BracketRight':
+                changeSpeed(currentSpeed + 0.25);
+                break;
             
-            case '\\':
-                changeSpeed(1.0);
+            case 'BracketLeft':
+                changeSpeed(currentSpeed - 0.25);
                 break;
         }
     });
