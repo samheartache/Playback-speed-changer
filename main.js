@@ -45,7 +45,7 @@ function changeSpeed (speed) {
         }
     );
 
-    showNotification(text=`Speed - ${currentSpeed.toFixed(1)}x`);
+    showNotification(`Speed - ${currentSpeed.toFixed(1)}x`);
 }
 
 
@@ -56,9 +56,9 @@ function main () {
             isEnabled = !isEnabled;
 
             if (!isEnabled) {
-                showNotification(text=`Speed changer OFF`);
+                showNotification(`Speed changer OFF`);
             } else {
-                showNotification(text=`Speed changer ON`);
+                showNotification(`Speed changer ON`);
             }
         }
 
