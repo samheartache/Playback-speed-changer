@@ -1,4 +1,5 @@
 let currentSpeed = 1.0;
+let isEnabled = true;
 
 
 function showNotification (text) {
@@ -50,6 +51,21 @@ function changeSpeed (speed) {
 
 function main () {
     document.addEventListener('keydown', (e) => {
+        if (e.key === 'F7') {
+            e.preventDefault();
+            isEnabled = !isEnabled;
+
+            if (!isEnabled) {
+                showNotification(text=`Speed changer OFF`);
+            } else {
+                showNotification(text=`Speed changer ON`);
+            }
+        }
+
+        if (!isEnabled) {
+            return;
+        }
+
         if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
             return;
         }
