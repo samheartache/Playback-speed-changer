@@ -51,7 +51,7 @@ function changeSpeed (speed) {
 
 function main () {
     document.addEventListener('keydown', (e) => {
-        if (e.key === 'F8') {
+        if (e.key === 'F9') {
             e.preventDefault();
             isEnabled = !isEnabled;
 
