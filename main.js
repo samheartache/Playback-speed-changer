@@ -36,7 +36,7 @@ function showNotification (text) {
 
 
 function changeSpeed (speed) {
-    speed = Math.max(0.1, Math.min(speed, 100));
+    speed = Math.max(0.1, Math.min(speed, 15.0));
     currentSpeed = speed;
 
     document.querySelectorAll('video').forEach(
@@ -77,6 +77,10 @@ function main () {
             
             case 'ControlRight':
                 changeSpeed(2.0);
+                break;
+            
+            case 'Backspace':
+                changeSpeed(15.0);
                 break;
 
             case 'BracketRight':
